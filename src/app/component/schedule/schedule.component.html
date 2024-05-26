@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th *ngFor="let day of days">{{ day }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let time of times">
+            <td>{{ time }}</td>
+            <td *ngFor="let day of [1, 2, 3, 4, 5]">{{ getClass(day, time) }}</td>
+        </tr>
+    </tbody>
+</table>
